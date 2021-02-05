@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration packages="org.apache.logging.log4j.core">
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ABSOLUTE} %-5p (%c)%notEmpty{ [ %marker ]} [%t] - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="${env:LOG_APPENDER:-stdout}"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,18 @@
+apiKey: 20530694-6e1e-4c29-9358-7124d269a0b1
+
+baseUrl: https://pro-api.coinmarketcap.com/v1
+
+recipients:
+  - kyle.areanraines@gmail.com
+
+emailFrom: kyle.areanraines@gmail.com
+
+coins:
+  BTC:
+    priceThresholdLow: 30000
+    priceThresholdHigh: 40000
+    oneHrPctThreshold: 5
+  DOGE:
+    priceThresholdLow: 0.04
+    priceThresholdHigh: 0.06
+    oneHrPctThreshold: 10
