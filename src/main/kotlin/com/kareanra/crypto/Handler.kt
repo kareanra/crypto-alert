@@ -12,11 +12,11 @@ import com.kareanra.crypto.model.PriceData
 import mu.KotlinLogging
 import kotlin.math.abs
 
-class Handler : RequestHandler<String, PriceData> {
+class Handler : RequestHandler<Map<String, String>, PriceData> {
     private val logger = KotlinLogging.logger { }
     private val mapper = ObjectMapper(YAMLFactory()).registerModule(KotlinModule())
 
-    override fun handleRequest(input: String, context: Context): PriceData = run()
+    override fun handleRequest(input: Map<String, String>, context: Context): PriceData = run()
 
     fun run(): PriceData {
         val resource = requireNotNull(Thread.currentThread().contextClassLoader.getResourceAsStream("config.yml")) {
