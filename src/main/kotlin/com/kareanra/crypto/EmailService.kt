@@ -8,6 +8,7 @@ import com.amazonaws.services.simpleemail.model.Destination
 import com.amazonaws.services.simpleemail.model.Message
 import com.amazonaws.services.simpleemail.model.SendEmailRequest
 import com.kareanra.crypto.model.Alert
+import com.kareanra.crypto.model.VaxAlert
 import mu.KotlinLogging
 
 class EmailService(private val config: Configuration) {
@@ -36,6 +37,35 @@ class EmailService(private val config: Configuration) {
                     )
                     .withSubject(
                         Content().withCharset("UTF-8").withData("[${alert.coin}] ${alert.change.display}: ${alert.amountFormatted}")
+                    )
+            )
+            .withSource(config.emailFrom)
+
+        try {
+            client.sendEmail(request)
+        } catch (e: Exception) {
+            logger.error(e) { "Error sending email" }
+        }
+    }
+
+    fun sendVaxAlerts(alerts: List<VaxAlert>) {
+        val request = SendEmailRequest().withDestination(Destination().withBccAddresses(config.recipients))
+            .withMessage(
+                Message()
+                    .withBody(
+                        Body()
+                            .withHtml(
+                                Content().withCharset("UTF-8").withData(
+                                    alerts.joinToString {
+                                        """
+                                            <h2>${it.city}: ${it.availability}</h2>
+                                        """.trimIndent()
+                                    }
+                                )
+                            )
+                    )
+                    .withSubject(
+                        Content().withCharset("UTF-8").withData("[VAX-ALERT] ${alerts.size} locations have available appointments!")
                     )
             )
             .withSource(config.emailFrom)

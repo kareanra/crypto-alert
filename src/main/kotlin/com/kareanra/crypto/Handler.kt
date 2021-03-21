@@ -6,54 +6,43 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.readValue
-import com.kareanra.crypto.model.Alert
-import com.kareanra.crypto.model.Change
-import com.kareanra.crypto.model.PriceData
+import com.kareanra.crypto.model.VaxAlert
+import com.kareanra.crypto.model.VaxData
 import mu.KotlinLogging
-import kotlin.math.abs
 
-class Handler : RequestHandler<Any, PriceData> {
+class Handler : RequestHandler<Any, VaxData> {
     private val logger = KotlinLogging.logger { }
     private val mapper = ObjectMapper(YAMLFactory()).registerModule(KotlinModule())
 
-    override fun handleRequest(input: Any, context: Context): PriceData = run()
+    override fun handleRequest(input: Any, context: Context): VaxData = run()
 
-    fun run(): PriceData {
+    fun run(): VaxData {
         val resource = requireNotNull(Thread.currentThread().contextClassLoader.getResourceAsStream("config.yml")) {
             "config not found"
         }
 
         val config = mapper.readValue<Configuration>(resource)
-        val priceData = CryptoService(config).getPriceData().also {
-            logger.info { "Price data: $it" }
+        val vaxData = VaxService(config).getData().also {
+            logger.info { "Vax data: $it" }
         }
 
-        val alerts = evaluateThresholds(config, priceData)
+        val alerts = checkAvailability(vaxData, config)
         val emailService = EmailService(config)
 
-        alerts.forEach {
-            logger.info { "Sending email for alert $it" }
-            emailService.sendAlert(it)
+        if (alerts.isNotEmpty()) {
+            logger.info { "Sending email for Vax alert $alerts" }
+            emailService.sendVaxAlerts(alerts)
+        } else {
+            logger.info { "No availability! :(" }
         }
 
-        return priceData
+        return vaxData
     }
 
-    private fun evaluateThresholds(config: Configuration, priceData: PriceData): List<Alert> =
-        priceData.data.keys.mapNotNull {
-            val thresholds = config.coins.getValue(it)
-            val coinData = priceData.data.getValue(it)
-            val price = coinData.quote.getValue("USD").price
-            val pctChange1h = coinData.quote.getValue("USD").pctChange1h
-
-            when {
-                price > thresholds.priceThresholdHigh ->
-                    Alert(coinData.name, Change.AbsoluteIncrease(price), price)
-                price < thresholds.priceThresholdLow ->
-                    Alert(coinData.name, Change.AbsoluteDecrease(price), price)
-                abs(pctChange1h) > thresholds.oneHrPctThreshold ->
-                    Alert(coinData.name, Change.PercentIncrease(pctChange1h), price)
-                else -> null
-            }
+    private fun checkAvailability(vaxData: VaxData, config: Configuration): List<VaxAlert> =
+        vaxData.responsePayloadData.data.getValue(config.state.toUpperCase()).filter {
+            it.status != "Fully Booked"
+        }.map {
+            VaxAlert(it.city, it.status)
         }
 }

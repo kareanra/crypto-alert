@@ -8,8 +8,8 @@ data class Alert(
     val amountFormatted = when (change) {
         is Change.AbsoluteDecrease -> "$${change.amount}"
         is Change.AbsoluteIncrease -> "$${change.amount}"
-        is Change.PercentDecrease -> "%${change.amount}"
-        is Change.PercentIncrease -> "%${change.amount}"
+        is Change.PercentDecrease -> "${change.amount}"
+        is Change.PercentIncrease -> "${change.amount}"
     }
 }
 

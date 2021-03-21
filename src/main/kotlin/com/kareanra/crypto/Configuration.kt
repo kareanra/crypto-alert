@@ -3,6 +3,7 @@ package com.kareanra.crypto
 data class Configuration(
     val apiKey: String,
     val baseUrl: String,
+    val state: String,
     val recipients: List<String>,
     val emailFrom: String,
     val coins: Map<String, CoinThresholds>,

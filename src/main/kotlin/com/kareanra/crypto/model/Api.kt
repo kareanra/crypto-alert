@@ -20,3 +20,15 @@ data class Quote(
     @JsonProperty("percent_change_24h")
     val pctChange24h: Double,
 )
+
+data class VaxData(val responsePayloadData: VaxPayload)
+
+data class VaxPayload(
+    val currentTime: String,
+    val data: Map<String, List<VaxStatus>>
+)
+
+data class VaxStatus(
+    val city: String,
+    val status: String
+)
