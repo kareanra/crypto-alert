@@ -1,7 +1,7 @@
 apiKey: 20530694-6e1e-4c29-9358-7124d269a0b1
 
 baseUrl: https://www.cvs.com/immunizations
-state: fl
+state: ma
 
 recipients:
   - kyle.areanraines@gmail.com
