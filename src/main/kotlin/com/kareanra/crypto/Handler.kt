@@ -7,6 +7,8 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.kareanra.crypto.model.VaxAlert
+import com.kareanra.crypto.model.VaxAppointmentAvailability
+import com.kareanra.crypto.model.VaxAppointmentAvailabilityResponse
 import com.kareanra.crypto.model.VaxData
 import mu.KotlinLogging
 
@@ -14,9 +16,33 @@ class Handler : RequestHandler<Any, VaxData> {
     private val logger = KotlinLogging.logger { }
     private val mapper = ObjectMapper(YAMLFactory()).registerModule(KotlinModule())
 
-    override fun handleRequest(input: Any, context: Context): VaxData = run()
+    override fun handleRequest(input: Any, context: Context): VaxData = run2()
 
-    fun run(): VaxData {
+    fun run(): VaxAppointmentAvailability? {
+        val resource = requireNotNull(Thread.currentThread().contextClassLoader.getResourceAsStream("config.yml")) {
+            "config not found"
+        }
+
+        val config = mapper.readValue<Configuration>(resource)
+        config.clinicIds.forEach { c ->
+            config.appointmentDates.forEach { ad ->
+                VaxService(config).getAvailability(c, ad)?.run {
+                    val emailService = EmailService(config)
+                    emailService.sendAppointmentAvailabilityAlert(this)
+
+                    logger.info { "Availability found!!!" }
+
+                    return this
+                }
+            }
+        }
+
+        logger.info { "No availability" }
+
+        return null
+    }
+
+    fun run2(): VaxData {
         val resource = requireNotNull(Thread.currentThread().contextClassLoader.getResourceAsStream("config.yml")) {
             "config not found"
         }

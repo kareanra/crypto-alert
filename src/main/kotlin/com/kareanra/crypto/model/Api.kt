@@ -32,3 +32,19 @@ data class VaxStatus(
     val city: String,
     val status: String
 )
+
+data class VaxAppointmentAvailability(
+    val clinicId: String,
+    val date: String
+)
+
+data class VaxAppointmentAvailabilityResponse(
+    val header: VaxAppointmentAvailabilityHeader
+)
+
+data class VaxAppointmentAvailabilityHeader(
+    val statusCode: String
+) {
+    val isAvailable
+        get() = statusCode != "6007"
+}

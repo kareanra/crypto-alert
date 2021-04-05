@@ -4,14 +4,17 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import com.kareanra.crypto.model.VaxAppointmentAvailability
+import com.kareanra.crypto.model.VaxAppointmentAvailabilityResponse
 import com.kareanra.crypto.model.VaxData
 import mu.KotlinLogging
+import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.time.Duration
 
-class VaxService(config: Configuration) {
+class VaxService(private val config: Configuration) {
     private val logger = KotlinLogging.logger { }
 
     private val mapper = jacksonObjectMapper()
@@ -34,6 +37,36 @@ class VaxService(config: Configuration) {
             ).execute().body!!.byteStream()
 
             mapper.readValue(response)
+        } catch (e: Exception) {
+            logger.error(e) { "Error fetching data from CVS Vax API" }
+            throw e
+        }
+
+    fun getAvailability(clinicId: String, date: String): VaxAppointmentAvailability? =
+        try {
+            val response = client.newCall(
+                Request.Builder()
+                    .url(
+                        HttpUrl.Builder()
+                            .scheme("https")
+                            .host(config.apiBaseUrl)
+                            .addPathSegments("/scheduler/v3/clinics/availabletimeslots")
+                            .addQueryParameter("visitStartDate", date)
+                            .addQueryParameter("visitEndDate", date)
+                            .addQueryParameter("clinicId", clinicId)
+                            .build()
+                    )
+                    .addHeader("x-api-key", config.cvsApiKey)
+                    .get()
+                    .build()
+            ).execute().body!!.byteStream()
+
+            mapper.readValue<VaxAppointmentAvailabilityResponse>(response).takeIf { it.header.isAvailable }
+                ?.let {
+                    VaxAppointmentAvailability(
+                        clinicId, date
+                    )
+                }
         } catch (e: Exception) {
             logger.error(e) { "Error fetching data from CVS Vax API" }
             throw e

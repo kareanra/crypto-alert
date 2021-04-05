@@ -9,6 +9,8 @@ import com.amazonaws.services.simpleemail.model.Message
 import com.amazonaws.services.simpleemail.model.SendEmailRequest
 import com.kareanra.crypto.model.Alert
 import com.kareanra.crypto.model.VaxAlert
+import com.kareanra.crypto.model.VaxAppointmentAvailability
+import com.kareanra.crypto.model.VaxAppointmentAvailabilityResponse
 import mu.KotlinLogging
 
 class EmailService(private val config: Configuration) {
@@ -48,6 +50,31 @@ class EmailService(private val config: Configuration) {
         }
     }
 
+    fun sendAppointmentAvailabilityAlert(vaxAppointmentAvailability: VaxAppointmentAvailability) {
+        val request = SendEmailRequest().withDestination(Destination().withBccAddresses(config.recipients))
+            .withMessage(
+                Message()
+                    .withBody(
+                        Body()
+                            .withHtml(
+                                Content().withCharset("UTF-8").withData(
+                                    "Availability found!"
+                                )
+                            )
+                    )
+                    .withSubject(
+                        Content().withCharset("UTF-8").withData("[VAX-ALERT] Availability for ${vaxAppointmentAvailability.clinicId} on ${vaxAppointmentAvailability.date}")
+                    )
+            )
+            .withSource(config.emailFrom)
+
+        try {
+            client.sendEmail(request)
+        } catch (e: Exception) {
+            logger.error(e) { "Error sending email" }
+        }
+    }
+
     fun sendVaxAlerts(alerts: List<VaxAlert>) {
         val request = SendEmailRequest().withDestination(Destination().withBccAddresses(config.recipients))
             .withMessage(
@@ -60,7 +87,7 @@ class EmailService(private val config: Configuration) {
                                         """
                                             <h2>${it.city}: ${it.availability}</h2>
                                         """.trimIndent()
-                                    }
+                                    } + "<p>https://www.cvs.com/immunizations/covid-19-vaccine</p>"
                                 )
                             )
                     )
