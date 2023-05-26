@@ -1,9 +1,21 @@
 apiKey: 20530694-6e1e-4c29-9358-7124d269a0b1
 
-baseUrl: https://pro-api.coinmarketcap.com/v1
+googleBaseUrl: https://www.google.com/finance/quote
+baseUrl: https://www.cvs.com/immunizations
+apiBaseUrl: api.cvshealth.com
+cvsApiKey: rFd64We9AwyvAFzIXsoSp8bYuewNohOZ
+clinicIds:
+  - CVS_02339
+  - CVS_00843
+appointmentDates:
+  - 2021-05-03
+  - 2021-05-04
+
+state: ma
 
 recipients:
-  - kyle.areanraines@gmail.com
+  - kyle@toasttab.com
+  - pneckowicz@toasttab.com
 
 emailFrom: kyle.areanraines@gmail.com
 
@@ -16,3 +28,7 @@ coins:
     priceThresholdLow: 0.04
     priceThresholdHigh: 0.07
     oneHrPctThreshold: 10
+
+stocks:
+  "TOST:NYSE":
+    min: 23.00

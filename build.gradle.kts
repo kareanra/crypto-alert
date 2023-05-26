@@ -29,11 +29,17 @@ dependencies {
     implementation(platform("org.apache.logging.log4j:log4j-bom:2.14.0"))
 
     implementation("com.amazonaws:aws-lambda-java-core:1.2.1")
-    implementation("com.amazonaws:aws-java-sdk-ses:1.11.948")
+    implementation("com.amazonaws:aws-java-sdk-ses:1.12.138")
+    implementation("software.amazon.awssdk:s3:2.18.11")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.fasterxml.jackson.core:jackson-databind")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml")
+<<<<<<< Updated upstream
+=======
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-csv")
+>>>>>>> Stashed changes
 
     implementation("org.apache.logging.log4j:log4j-api")
     implementation("org.apache.logging.log4j:log4j-core")

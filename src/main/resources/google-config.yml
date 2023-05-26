@@ -1,0 +1,7 @@
+apiKey: b889598c0fmshced7902ce4a4bf0p18cce0jsn6a52632716a6
+apiHost: google-translate1.p.rapidapi.com
+useQueryString: true
+
+baseUrl: https://google-translate1.p.rapidapi.com/language/translate/v2
+
+text: what language is this?

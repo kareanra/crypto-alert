@@ -1,0 +1,715 @@
+[
+    {
+        "language": {
+            "language": "su",
+            "name": "Sundanese",
+            "country": "Indonesia"
+        },
+        "translation": "bahasa naon ieu?"
+    },
+    {
+        "language": {
+            "language": "my",
+            "name": "Burmese",
+            "country": "Myanmar"
+        },
+        "translation": "ဒါက ဘာဘာသာစကားလဲ"
+    },
+    {
+        "language": {
+            "language": "pa",
+            "name": "Punjabi",
+            "country": "India"
+        },
+        "translation": "ਇਹ ਕਿਹੜੀ ਭਾਸ਼ਾ ਹੈ?"
+    },
+    {
+        "language": {
+            "language": "ro",
+            "name": "Romanian",
+            "country": "Romania"
+        },
+        "translation": "ce limba este asta?"
+    },
+    {
+        "language": {
+            "language": "haw",
+            "name": "Hawaiian",
+            "country": "Hawaii"
+        },
+        "translation": "He aha kēia ʻōlelo?"
+    },
+    {
+        "language": {
+            "language": "et",
+            "name": "Estonian",
+            "country": "Estonia"
+        },
+        "translation": "mis Keel see on?"
+    },
+    {
+        "language": {
+            "language": "hi",
+            "name": "Hindi",
+            "country": "India"
+        },
+        "translation": "यह कौनसी भाषा है?"
+    },
+    {
+        "language": {
+            "language": "tg",
+            "name": "Tajik",
+            "country": "Tajikistan"
+        },
+        "translation": "ин кадом забон аст?"
+    },
+    {
+        "language": {
+            "language": "ka",
+            "name": "Georgian",
+            "country": "Georgia"
+        },
+        "translation": "ეს რა ენაა?"
+    },
+    {
+        "language": {
+            "language": "ig",
+            "name": "Igbo",
+            "country": "Nigeria"
+        },
+        "translation": "Kedu asụsụ nke a?"
+    },
+    {
+        "language": {
+            "language": "mt",
+            "name": "Maltese",
+            "country": "Malta"
+        },
+        "translation": "liema lingwa hija din?"
+    },
+    {
+        "language": {
+            "language": "el",
+            "name": "Greek",
+            "country": "Greece"
+        },
+        "translation": "τι ΓΛΩΣΣΑ ειναι αυτη?"
+    },
+    {
+        "language": {
+            "language": "yi",
+            "name": "Yiddish",
+            "country": "Russia"
+        },
+        "translation": "וועלכע לשון איז דאס?"
+    },
+    {
+        "language": {
+            "language": "da",
+            "name": "Danish",
+            "country": "Denmark"
+        },
+        "translation": "Hvilket sprog er dette?"
+    },
+    {
+        "language": {
+            "language": "hr",
+            "name": "Croatian",
+            "country": "Croatia"
+        },
+        "translation": "koji je ovo jezik?"
+    },
+    {
+        "language": {
+            "language": "ps",
+            "name": "Pashto",
+            "country": "Afghanistan"
+        },
+        "translation": "دا کومه ژبه ده؟"
+    },
+    {
+        "language": {
+            "language": "pl",
+            "name": "Polish",
+            "country": "Poland"
+        },
+        "translation": "jaki to język?"
+    },
+    {
+        "language": {
+            "language": "am",
+            "name": "Amharic",
+            "country": "Ethiopia"
+        },
+        "translation": "ይህ ምን ቋንቋ ነው?"
+    },
+    {
+        "language": {
+            "language": "sw",
+            "name": "Swahili",
+            "country": "Kenya"
+        },
+        "translation": "hii ni lugha gani?"
+    },
+    {
+        "language": {
+            "language": "sq",
+            "name": "Albanian",
+            "country": "Albania"
+        },
+        "translation": "cfare gjuhe eshte kjo"
+    },
+    {
+        "language": {
+            "language": "ko",
+            "name": "Korean",
+            "country": "South Korea"
+        },
+        "translation": "이것이 무슨 언어 지?"
+    },
+    {
+        "language": {
+            "language": "es",
+            "name": "Spanish",
+            "country": "Spain"
+        },
+        "translation": "¿Qué lenguaje es este?"
+    },
+    {
+        "language": {
+            "language": "la",
+            "name": "Latin",
+            "country": "Vatican City"
+        },
+        "translation": "quae lingua est?"
+    },
+    {
+        "language": {
+            "language": "te",
+            "name": "Telugu",
+            "country": "India"
+        },
+        "translation": "ఇది ఏ భాష?"
+    },
+    {
+        "language": {
+            "language": "af",
+            "name": "Afrikaans",
+            "country": "South Africa"
+        },
+        "translation": "watter taal is dit?"
+    },
+    {
+        "language": {
+            "language": "lb",
+            "name": "Luxembourgish",
+            "country": "Luxembourg"
+        },
+        "translation": "wat fir eng Sprooch ass dat?"
+    },
+    {
+        "language": {
+            "language": "vi",
+            "name": "Vietnamese",
+            "country": "Vietnam"
+        },
+        "translation": "ngôn ngữ này là gì?"
+    },
+    {
+        "language": {
+            "language": "sk",
+            "name": "Slovak",
+            "country": "Slovakia"
+        },
+        "translation": "aký je to jazyk?"
+    },
+    {
+        "language": {
+            "language": "kk",
+            "name": "Kazakh",
+            "country": "Kazakhstan"
+        },
+        "translation": "бұл қай тіл?"
+    },
+    {
+        "language": {
+            "language": "be",
+            "name": "Belarusian",
+            "country": "Belarus"
+        },
+        "translation": "што гэта за мова?"
+    },
+    {
+        "language": {
+            "language": "eu",
+            "name": "Basque",
+            "country": "Spain"
+        },
+        "translation": "zein hizkuntza da hau?"
+    },
+    {
+        "language": {
+            "language": "ug",
+            "name": "Uyghur",
+            "country": "China"
+        },
+        "translation": "بۇ قايسى تىل؟"
+    },
+    {
+        "language": {
+            "language": "az",
+            "name": "Azerbaijani",
+            "country": "Azerbaijan"
+        },
+        "translation": "bu hansı dildir?"
+    },
+    {
+        "language": {
+            "language": "zh-CN",
+            "name": "Cantonese",
+            "country": "Hong Kong"
+        },
+        "translation": "这是什么语言？"
+    },
+    {
+        "language": {
+            "language": "sm",
+            "name": "Samoan",
+            "country": "American Samoa"
+        },
+        "translation": "o le a le gagana lea?"
+    },
+    {
+        "language": {
+            "language": "lv",
+            "name": "Latvian",
+            "country": "Latvia"
+        },
+        "translation": "kāda šī valoda ir?"
+    },
+    {
+        "language": {
+            "language": "ja",
+            "name": "Japanese",
+            "country": "Japan"
+        },
+        "translation": "これは何語ですか？"
+    },
+    {
+        "language": {
+            "language": "ht",
+            "name": "Haitian Creole",
+            "country": "Haiti"
+        },
+        "translation": "ki lang sa?"
+    },
+    {
+        "language": {
+            "language": "ar",
+            "name": "Arabic",
+            "country": "Saudi Arabia"
+        },
+        "translation": "ما هذه اللغة؟"
+    },
+    {
+        "language": {
+            "language": "sv",
+            "name": "Swedish",
+            "country": "Sweden"
+        },
+        "translation": "vad för språk är detta?"
+    },
+    {
+        "language": {
+            "language": "bg",
+            "name": "Bulgarian",
+            "country": "Bulgaria"
+        },
+        "translation": "На какъв език е това?"
+    },
+    {
+        "language": {
+            "language": "tr",
+            "name": "Turkish",
+            "country": "Turkey"
+        },
+        "translation": "Bu hangi dil?"
+    },
+    {
+        "language": {
+            "language": "lt",
+            "name": "Lithuanian",
+            "country": "Lithuania"
+        },
+        "translation": "kokia tai kalba?"
+    },
+    {
+        "language": {
+            "language": "ne",
+            "name": "Nepali",
+            "country": "Nepal"
+        },
+        "translation": "यो कुन भाषा हो?"
+    },
+    {
+        "language": {
+            "language": "ur",
+            "name": "Urdu",
+            "country": "Pakistan"
+        },
+        "translation": "یہ کونسی زبان ہے؟"
+    },
+    {
+        "language": {
+            "language": "th",
+            "name": "Thai",
+            "country": "Thailand"
+        },
+        "translation": "นี่คือภาษาอะไร?"
+    },
+    {
+        "language": {
+            "language": "ky",
+            "name": "Kyrgyz",
+            "country": "Kyrgyzstan"
+        },
+        "translation": "бул кайсы тил?"
+    },
+    {
+        "language": {
+            "language": "fr",
+            "name": "French",
+            "country": "France"
+        },
+        "translation": "Quelle langue est-ce?"
+    },
+    {
+        "language": {
+            "language": "so",
+            "name": "Somali",
+            "country": "Somalia",
+            "nativeSpeakers": "16M",
+            "origin": "Afro-Asiatic"
+        },
+        "translation": "waa maxay luqadda kani?"
+    },
+    {
+        "language": {
+            "language": "bn",
+            "name": "Bengali",
+            "country": "Bangladesh",
+            "nativeSpeakers": "300M",
+            "origin": "Indo-Aryan"
+        },
+        "translation": "এই কি ভাষা?"
+    },
+    {
+        "language": {
+            "language": "fi",
+            "name": "Finnish",
+            "country": "Finland",
+            "nativeSpeakers": "5.8M",
+            "origin": "Proto-Uralic"
+        },
+        "translation": "mikä kieli Tämä on?"
+    },
+    {
+        "language": {
+            "language": "gl",
+            "name": "Galician",
+            "country": "Galicia",
+            "nativeSpeakers": "2.4M",
+            "origin": "Ibero-Romance"
+        },
+        "translation": "que lingua é esta?"
+    },
+    {
+        "language": {
+            "language": "hy",
+            "name": "Armenian",
+            "country": "Armenia",
+            "nativeSpeakers": "6M",
+            "origin": "Indo-European"
+        },
+        "translation": "ինչ լեզու է սա"
+    },
+    {
+        "language": {
+            "language": "sr",
+            "name": "Serbian",
+            "country": "Serbia",
+            "nativeSpeakers": "12M",
+            "origin": "Indo-European"
+        },
+        "translation": "који је ово језик?"
+    },
+    {
+        "language": {
+            "language": "km",
+            "name": "Khmer",
+            "country": "Cambodia",
+            "nativeSpeakers": "16M",
+            "origin": "Austroasiatic"
+        },
+        "translation": "តើនេះជាភាសាអ្វី?"
+    },
+    {
+        "language": {
+            "language": "mn",
+            "name": "Mongolian",
+            "country": "Mongolia",
+            "nativeSpeakers": "3.6M"
+        },
+        "translation": "энэ ямар хэл вэ?"
+    },
+    {
+        "language": {
+            "language": "uk",
+            "name": "Ukrainian",
+            "country": "Ukraine",
+            "nativeSpeakers": "40M",
+            "origin": "Indo-European"
+        },
+        "translation": "що це за мова?"
+    },
+    {
+        "language": {
+            "language": "hu",
+            "name": "Hungarian",
+            "country": "Hungary",
+            "nativeSpeakers": "13M",
+            "origin": "Uralic"
+        },
+        "translation": "milyen nyelv ez?"
+    },
+    {
+        "language": {
+            "language": "is",
+            "name": "Icelandic",
+            "country": "Iceland",
+            "nativeSpeakers": "314K",
+            "origin": "Germanic"
+        },
+        "translation": "hvaða tungumál er þetta?"
+    },
+    {
+        "language": {
+            "language": "cy",
+            "name": "Welsh",
+            "country": "Wales",
+            "nativeSpeakers": "314K",
+            "origin": "Germanic"
+        },
+        "translation": "pa iaith yw hwn?"
+    },
+    {
+        "language": {
+            "language": "lo",
+            "name": "Lao",
+            "country": "Laos"
+        },
+        "translation": "ນີ້ແມ່ນພາສາຫຍັງ?"
+    },
+    {
+        "language": {
+            "language": "zu",
+            "name": "Zulu",
+            "country": "South Africa"
+        },
+        "translation": "yiluphi ulimi lolu?"
+    },
+    {
+        "language": {
+            "language": "mi",
+            "name": "Maori",
+            "country": "New Zealand"
+        },
+        "translation": "he aha tenei reo?"
+    },
+    {
+        "language": {
+            "language": "tl",
+            "name": "Filipino",
+            "country": "Philippines"
+        },
+        "translation": "anong wika ito?"
+    },
+    {
+        "language": {
+            "language": "sl",
+            "name": "Slovenian",
+            "country": "Slovenia"
+        },
+        "translation": "kateri jezik je to?"
+    },
+    {
+        "language": {
+            "language": "de",
+            "name": "German",
+            "country": "Germany"
+        },
+        "translation": "Welche Sprache ist das?"
+    },
+    {
+        "language": {
+            "language": "ms",
+            "name": "Malay",
+            "country": "Malaysia"
+        },
+        "translation": "Bahasa apakah ini?"
+    },
+    {
+        "language": {
+            "language": "ca",
+            "name": "Catalan",
+            "country": "Spain"
+        },
+        "translation": "quina llengua és aquesta?"
+    },
+    {
+        "language": {
+            "language": "no",
+            "name": "Norwegian",
+            "country": "Norway"
+        },
+        "translation": "hvilket språk er dette?"
+    },
+    {
+        "language": {
+            "language": "id",
+            "name": "Indonesian",
+            "country": "Indonesia",
+            "nativeSpeakers": "43M",
+            "origin": "Austronesian"
+        },
+        "translation": "bahasa apa ini?"
+    },
+    {
+        "language": {
+            "language": "zh",
+            "name": "Mandarin",
+            "country": "China"
+        },
+        "translation": "这是什么语言？"
+    },
+    {
+        "language": {
+            "language": "pt",
+            "name": "Portuguese",
+            "country": "Portugal"
+        },
+        "translation": "Que língua é essa?"
+    },
+    {
+        "language": {
+            "language": "ga",
+            "name": "Irish",
+            "country": "Ireland"
+        },
+        "translation": "cén teanga é seo?"
+    },
+    {
+        "language": {
+            "language": "mk",
+            "name": "Macedonian",
+            "country": "Macedonia"
+        },
+        "translation": "кој јазик е ова?"
+    },
+    {
+        "language": {
+            "language": "cs",
+            "name": "Czech",
+            "country": "Czech Republic"
+        },
+        "translation": "Co je to za jazyk?"
+    },
+    {
+        "language": {
+            "language": "uz",
+            "name": "Uzbek",
+            "country": "Uzbekistan"
+        },
+        "translation": "bu qaysi til?"
+    },
+    {
+        "language": {
+            "language": "fa",
+            "name": "Farsi",
+            "country": "Iran"
+        },
+        "translation": "این چه زبانی است؟"
+    },
+    {
+        "language": {
+            "language": "it",
+            "name": "Italian",
+            "country": "Italy"
+        },
+        "translation": "che lingua è questa?"
+    },
+    {
+        "language": {
+            "language": "ta",
+            "name": "Tamil",
+            "country": "India"
+        },
+        "translation": "இது என்ன மொழி?"
+    },
+    {
+        "language": {
+            "language": "gu",
+            "name": "Gujarati",
+            "country": "India"
+        },
+        "translation": "આ કઈ ભાષા છે?"
+    },
+    {
+        "language": {
+            "language": "jw",
+            "name": "Javanese",
+            "country": "Java"
+        },
+        "translation": "bahasa opo iki?"
+    },
+    {
+        "language": {
+            "language": "hmn",
+            "name": "Hmong",
+            "country": "China"
+        },
+        "translation": "lo lus no yog dab tsi?"
+    },
+    {
+        "language": {
+            "language": "bs",
+            "name": "Bosnian",
+            "country": "Bosnia"
+        },
+        "translation": "koji je ovo jezik?"
+    },
+    {
+        "language": {
+            "language": "nl",
+            "name": "Dutch",
+            "country": "Netherlands"
+        },
+        "translation": "welke taal is dit?"
+    },
+    {
+        "language": {
+            "language": "ru",
+            "name": "Russian",
+            "country": "Russia"
+        },
+        "translation": "Что это за язык?"
+    },
+    {
+        "language": {
+            "language": "he",
+            "name": "Hebrew",
+            "country": "Israel"
+        },
+        "translation": "איזו שפה זו?"
+    }
+]
